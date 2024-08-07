@@ -12,4 +12,7 @@ app.get("/read",(req,res)=>{
     res.render("read")
 
 })
+app.post("/create",(req,res)=>{
+    
+})
 app.listen(8000)
