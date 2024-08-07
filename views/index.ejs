@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/output.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0; /* Ensure no margin to avoid scrollbars */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-full h-full bg-zinc-900 p-10">
+      <h1 class="text-2xl text-white text-center">Create User</h1>
+      <form
+        action=""
+        class="text-white h-1/3 flex flex-col justify-around items-center"
+      >
+        <input
+          type="text"
+          class="px-5 py-2 w-1/4 border-2 bg-transparent outline-none border-zinc-700 rounded-lg"
+          placeholder="Name...."
+        />
+        <input
+          type="text"
+          class="px-5 py-2 w-1/4 border-2 bg-transparent outline-none border-zinc-700 rounded-lg"
+          placeholder="Email"
+        />
+        <input
+          type="text"
+          class="px-5 py-2 w-1/4 border-2 bg-transparent outline-none border-zinc-700 rounded-lg"
+          placeholder="image url"
+        />
+        <input
+          type="submit"
+          value="Create User"
+          class="px-5 py-2 w-1/12 bg-blue-500 rounded-lg hover:cursor-pointer"
+        />
+      </form>
+    </div>
+  </body>
+</html>
