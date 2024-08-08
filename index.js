@@ -18,7 +18,7 @@ app.post("/create", async (req, res) => {
     email: req.body.email,
     image: req.body.image
   });
-  res.render("index")
+  res.redirect("/read")
 });
 app.get("/read", async (req, res) => {
   try {
