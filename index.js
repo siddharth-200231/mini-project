@@ -18,9 +18,16 @@ app.post("/create", async (req, res) => {
     email: req.body.email,
     image: req.body.image
   });
-  res.send(Createduser);
+  res.render("index")
 });
-app.get("/read", (req, res) => {
-  res.render("read");
+app.get("/read", async (req, res) => {
+  try {
+    let allUsers = await userModel.find();
+    res.render("read", { users: allUsers });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
+
 app.listen(8000);

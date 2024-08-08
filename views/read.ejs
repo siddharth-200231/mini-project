@@ -16,19 +16,23 @@
   <body>
     <div class="w-full h-full bg-black p-10 text-white">
         <a href="/" class="mb-3 text-blue-500">back to Home</a>
-      <h1 class="text-3xl tracking-tighter mb-3 text-start">All Users</h1>
-      <div class="users flex gap-3 flex-wrap justify-around">
-        <div class="user max-w-72 p-4 rounded-lg bg-zinc-800   ">
-          <div class="w-full h-40 rounded-lg bg-zinc-600"></div>
-          <h3 class="text-xl mt-1 text-center tracking-tighter"></h3>
-          <h3 class="text-sm  text-center text-slate-400 mb-2  tracking-tight">sahusidd715@gmail.com</h3>
-          <div class="flex justify-evenly">
-            <a href="" class="text-sm text-blue-400 tracking-tight">Edit User</a>
-            <a href="" class="text-sm text-red-500 tracking-tight">Delete User</a>
+      <h1 class="text-4xl tracking-tighter  text-center mb-4">All Users</h1>
+      <div class="users flex gap-3 flex-wrap justify-around content-center ">
+        <% users.forEach(user => { %>
+          <div class="user max-w-72 p-4 rounded-lg bg-zinc-800">
+            <div class="w-full p-2 overflow-hidden">
+              <img src="<%= user.image %>"" alt="User Image" class="w-full h-40 object-cover rounded-lg">
+            </div>
+            <h3 class="text-xl mt-1 text-center tracking-tighter"><%= user.username %></h3>
+            <h3 class="text-sm text-center text-slate-400 mb-2 tracking-tight"><%= user.email %></h3>
+            <div class="flex justify-evenly gap-2">
+              <a href="/edit/<%= user._id %>" class="text-sm text-blue-400 tracking-tight">Edit User</a>
+              <a href="/delete/<%= user._id %>" class="text-sm text-red-500 tracking-tight">Delete User</a>
+            </div>
           </div>
-        </div>
-        
-          </div>
+        <% }) %>
+      </div>
+      
      
      
         
